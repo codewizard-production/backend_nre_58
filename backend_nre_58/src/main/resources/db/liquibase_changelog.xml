@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <property name="schemaName" value="nre"></property>
+    <property name="author=" value="db-designer"></property>
+    <changeSet id="v1-01-01" author="${author}">
+    
+ <createTable schemaName="${schemaName}" tableName="Training">
+    <column name="CompleteBy" type="DATE" />
+    
+ 	<column name="TrainingsId" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+ 	<column name="Trainingslist" type="INTEGER" />
+   
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="PerformanceAppraisal">
+    <column name="Quarter" type="VARCHAR(250)" />
+    
+     <column name="Date" type="TIMESTAMP" />
+    
+     <column name="EmployeeNotes" type="VARCHAR(250)" />
+    
+     <column name="ManagerComments" type="VARCHAR(250)" />
+    
+     <column name="HikePercentage" type="VARCHAR(250)" />
+    
+     <column name="AppraisalRating" type="VARCHAR(250)" />
+    
+ 	<column name="AppraisalID" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="Promotion" type="BOOLEAN" />
+    
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="Organization">
+	<column name="OrganizationID" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="OrganizationName" type="VARCHAR(250)" />
+    
+     <column name="OrganzationMissionVision" type="VARCHAR(250)" />
+    
+     <column name="OrganizationValues" type="VARCHAR(250)" />
+    
+ 	<column name="OrgBranch" type="INTEGER" />
+   
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="EmployeePersonalInfo">
+    <column name="EmpFullName" type="VARCHAR(250)" />
+    
+     <column name="EmpGender" type="VARCHAR(250)" />
+    
+     <column name="EmpDOB" type="TIMESTAMP" />
+    
+     <column name="EmpPhoneNo" type="BIGINT" />
+    
+     <column name="EmpEmailID" type="VARCHAR(250)" />
+    
+     <column name="EmpLaguagesKnown" type="VARCHAR(250)" />
+    
+     <column name="EmployeePersonalID" type="INTEGER" />
+    
+     <column name="PrevCompany" type="VARCHAR(250)" />
+    
+     <column name="JobTtile" type="VARCHAR(250)" />
+    
+     <column name="WorkLocation" type="VARCHAR(250)" />
+    
+     <column name="FromDate" type="TIMESTAMP" />
+    
+     <column name="ToDate" type="TIMESTAMP" />
+    
+     <column name="EmpType" type="VARCHAR(250)" />
+    
+     <column name="RecentGrad" type="VARCHAR(250)" />
+    
+     <column name="CertificationsVerified" type="BOOLEAN" />
+    
+     <column name="EmpBloodgroup" type="VARCHAR(250)" />
+    
+     <column name="EmpEmergencycontact" type="BIGINT" />
+    
+     <column name="Relation" type="VARCHAR(250)" />
+    
+     <column name="PocName" type="VARCHAR(250)" />
+    
+ 	<column name="Id" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="EmlpoyeeProfile">
+	<column name="EmpID" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="EmpName" type="VARCHAR(250)" />
+    
+     <column name="EmpEmailID" type="VARCHAR(250)" />
+    
+     <column name="EmpPhoto" type="VARCHAR(250)" />
+    
+     <column name="JobTitle" type="VARCHAR(250)" />
+    
+ 	<column name="DomainVertical" type="INTEGER" />
+   
+     <column name="ReportingManager" type="VARCHAR(250)" />
+    
+ 	<column name="EmpType" type="INTEGER" />
+   
+ 	<column name="WorkLocation" type="INTEGER" />
+   
+     <column name="PackageOffered" type="INTEGER" />
+    
+     <column name="EmpContactNum" type="BIGINT" />
+    
+     <column name="Level" type="VARCHAR(250)" />
+    
+     <column name="Domain" type="VARCHAR(250)" />
+    
+ 	
+</createTable>
+	
+
+	
+   
+	<addColumn tableName="Organization" schemaName="${schemaName}">
+	    <column name="OrganizationEmployees" type="INTEGER"/>
+	</addColumn>
+	<addForeignKeyConstraint baseTableName="Organization" baseColumnNames="OrganizationEmployees" baseTableSchemaName="${schemaName}" constraintName="Organization_Employees_fk" referencedTableName="EmlpoyeeProfile"
+	                                 referencedColumnNames="EmpID" referencedTableSchemaName="${schemaName}"/>
+ 
+  
+	<addColumn tableName="EmlpoyeeProfile" schemaName="${schemaName}">
+	    <column name="EmlpoyeeProfileEmpInfo" type="INTEGER"/>
+	</addColumn>
+	<addForeignKeyConstraint baseTableName="EmlpoyeeProfile" baseColumnNames="EmlpoyeeProfileEmpInfo" baseTableSchemaName="${schemaName}" constraintName="EmlpoyeeProfile_EmpInfo_fk" referencedTableName="EmployeePersonalInfo"
+	                                 referencedColumnNames="Id" referencedTableSchemaName="${schemaName}"/>
+ 
+
+	<addColumn tableName="EmlpoyeeProfile" schemaName="${schemaName}">
+	    <column name="EmlpoyeeProfileAppraisal" type="INTEGER"/>
+	</addColumn>
+	<addForeignKeyConstraint baseTableName="EmlpoyeeProfile" baseColumnNames="EmlpoyeeProfileAppraisal" baseTableSchemaName="${schemaName}" constraintName="EmlpoyeeProfile_Appraisal_fk" referencedTableName="PerformanceAppraisal"
+	                                 referencedColumnNames="AppraisalID" referencedTableSchemaName="${schemaName}"/>
+ 
+
+	<addColumn tableName="EmlpoyeeProfile" schemaName="${schemaName}">
+	    <column name="EmlpoyeeProfileOrgProvidedTrainings" type="INTEGER"/>
+	</addColumn>
+	<addForeignKeyConstraint baseTableName="EmlpoyeeProfile" baseColumnNames="EmlpoyeeProfileOrgProvidedTrainings" baseTableSchemaName="${schemaName}" constraintName="EmlpoyeeProfile_OrgProvidedTrainings_fk" referencedTableName="Training"
+	                                 referencedColumnNames="TrainingsId" referencedTableSchemaName="${schemaName}"/>
+ 
+	    </changeSet>
+</databaseChangeLog>

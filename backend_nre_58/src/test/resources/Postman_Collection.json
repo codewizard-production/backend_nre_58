@@ -1,0 +1,4007 @@
+{
+	"info": 
+	{
+		"_postman_id": "1a33718f-0e82-4bb3-b13c-2b4aec9504d2",
+		"name": "nre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7529375"
+	},
+	"item": [
+	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "Training",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TrainingByTrainingsId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"Trainingslist\":\"DeliveryManagement\",\"CompleteBy\":\"1979-03-25\",\"TrainingsId\":21}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a Training",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"Trainingslist\":\"DeliveryManagement\",\"CompleteBy\":\"1979-03-25\",\"TrainingsId\":21}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of CompleteBy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings(<<replace_with_keyFieldValue>>)/CompleteBy/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings(CompleteBy)",
+										"CompleteBy",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings?$filter=CompleteBy eq 1979-03-25\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "CompleteBy eq 1979-03-25\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of TrainingsId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings(<<replace_with_keyFieldValue>>)/TrainingsId/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings(TrainingsId)",
+										"TrainingsId",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings?$filter=TrainingsId eq 21\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "TrainingsId eq 21\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Trainingslist",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings(<<replace_with_keyFieldValue>>)/Trainingslist/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings(Trainingslist)",
+										"Trainingslist",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings?$filter=Trainingslist eq DeliveryManagement\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Trainingslist eq DeliveryManagement\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+			{
+					"name": "System Query Options 3",
+					"item": [		        
+	
+	
+	{
+							"name": "Get $filter option on enum",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings?$filter=Trainingslist eq <<Model.TrainingLevel'DeliveryManagement'>>",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Trainingslist eq <<Model.TrainingLevel'DeliveryManagement'>>"
+										}
+									]
+								}
+							},
+							"response": []
+						} 
+					    ]
+				        },
+	{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Trainings?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Trainings"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ]},     	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "PerformanceAppraisal",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PerformanceAppraisalByAppraisalID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"Quarter\":\"resell\",\"Date\":\"1969-01-26\",\"EmployeeNotes\":\"enjoy\",\"ManagerComments\":\"moult\",\"HikePercentage\":\"swim\",\"AppraisalRating\":\"grind\",\"AppraisalID\":34,\"Promotion\":true}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a PerformanceAppraisal",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"Quarter\":\"resell\",\"Date\":\"1969-01-26\",\"EmployeeNotes\":\"enjoy\",\"ManagerComments\":\"moult\",\"HikePercentage\":\"swim\",\"AppraisalRating\":\"grind\",\"AppraisalID\":34,\"Promotion\":true}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of Quarter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals(<<replace_with_keyFieldValue>>)/Quarter/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals(Quarter)",
+										"Quarter",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals?$filter=Quarter eq 'resell'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Quarter eq 'resell'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Date",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals(<<replace_with_keyFieldValue>>)/Date/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals(Date)",
+										"Date",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals?$filter=Date eq 1969-01-26\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Date eq 1969-01-26\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmployeeNotes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals(<<replace_with_keyFieldValue>>)/EmployeeNotes/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals(EmployeeNotes)",
+										"EmployeeNotes",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals?$filter=EmployeeNotes eq 'enjoy'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmployeeNotes eq 'enjoy'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of ManagerComments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals(<<replace_with_keyFieldValue>>)/ManagerComments/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals(ManagerComments)",
+										"ManagerComments",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals?$filter=ManagerComments eq 'moult'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "ManagerComments eq 'moult'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of HikePercentage",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals(<<replace_with_keyFieldValue>>)/HikePercentage/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals(HikePercentage)",
+										"HikePercentage",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals?$filter=HikePercentage eq 'swim'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "HikePercentage eq 'swim'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of AppraisalRating",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals(<<replace_with_keyFieldValue>>)/AppraisalRating/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals(AppraisalRating)",
+										"AppraisalRating",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals?$filter=AppraisalRating eq 'grind'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "AppraisalRating eq 'grind'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of AppraisalID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals(<<replace_with_keyFieldValue>>)/AppraisalID/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals(AppraisalID)",
+										"AppraisalID",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals?$filter=AppraisalID eq 34\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "AppraisalID eq 34\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Promotion",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals(<<replace_with_keyFieldValue>>)/Promotion/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals(Promotion)",
+										"Promotion",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals?$filter=Promotion eq true\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Promotion eq true\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PerformanceAppraisals?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PerformanceAppraisals"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ]},     	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "Organization",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "OrganizationByOrganizationID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"OrgBranch\":\"Germany\",\"OrganizationID\":53,\"OrganizationName\":\"Girja Chattopadhyay IV\",\"OrganzationMissionVision\":\"sneeze\",\"OrganizationValues\":\"overtake\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a Organization",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"OrgBranch\":\"Germany\",\"OrganizationID\":53,\"OrganizationName\":\"Girja Chattopadhyay IV\",\"OrganzationMissionVision\":\"sneeze\",\"OrganizationValues\":\"overtake\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of OrganizationID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations(<<replace_with_keyFieldValue>>)/OrganizationID/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations(OrganizationID)",
+										"OrganizationID",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations?$filter=OrganizationID eq 53\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "OrganizationID eq 53\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of OrganizationName",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations(<<replace_with_keyFieldValue>>)/OrganizationName/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations(OrganizationName)",
+										"OrganizationName",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations?$filter=OrganizationName eq 'Girja Chattopadhyay IV'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "OrganizationName eq 'Girja Chattopadhyay IV'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of OrganzationMissionVision",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations(<<replace_with_keyFieldValue>>)/OrganzationMissionVision/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations(OrganzationMissionVision)",
+										"OrganzationMissionVision",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations?$filter=OrganzationMissionVision eq 'sneeze'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "OrganzationMissionVision eq 'sneeze'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of OrganizationValues",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations(<<replace_with_keyFieldValue>>)/OrganizationValues/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations(OrganizationValues)",
+										"OrganizationValues",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations?$filter=OrganizationValues eq 'overtake'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "OrganizationValues eq 'overtake'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of OrgBranch",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations(<<replace_with_keyFieldValue>>)/OrgBranch/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations(OrgBranch)",
+										"OrgBranch",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations?$filter=OrgBranch eq Germany\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "OrgBranch eq Germany\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+			{
+					"name": "System Query Options 3",
+					"item": [		        
+	
+	
+	{
+							"name": "Get $filter option on enum",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations?$filter=OrgBranch eq <<Model.OrgBranch'Germany'>>",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "OrgBranch eq <<Model.OrgBranch'Germany'>>"
+										}
+									]
+								}
+							},
+							"response": []
+						} 
+					    ]
+				        },
+	{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ,
+		{
+					"name": "Navigation  Request",
+					"item": [
+								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations(<<replace_with_keyFieldValue>>)/Employees",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations(<<replace_with_keyFieldValue>>)",
+										"Employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on Organizations navigation property Employees",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Organizations(<<replace_with_keyFieldValue>>)?$expand=Employees",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Organizations(<<replace_with_keyFieldValue>>)"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "Employees"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+					    ]
+				        }
+  ]},     	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "EmployeePersonalInfo",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmployeePersonalInfoById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"EmpFullName\":\"Bhuvaneshwar Dubashi\",\"EmpGender\":\"remain\",\"EmpDOB\":\"1998-03-16\",\"EmpPhoneNo\":84,\"EmpEmailID\":\"bhaves.gill@rediffmail.com\",\"EmpLaguagesKnown\":\"saw\",\"EmployeePersonalID\":80,\"PrevCompany\":\"confess\",\"JobTtile\":\"stop\",\"WorkLocation\":\"freeze\",\"FromDate\":\"2003-08-15\",\"ToDate\":\"1982-04-11\",\"EmpType\":\"kick\",\"RecentGrad\":\"inspire\",\"CertificationsVerified\":true,\"EmpBloodgroup\":\"imply\",\"EmpEmergencycontact\":66,\"Relation\":\"measure\",\"PocName\":\"Dr. Ahilya Bhat\",\"Id\":10}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a EmployeePersonalInfo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"EmpFullName\":\"Bhuvaneshwar Dubashi\",\"EmpGender\":\"remain\",\"EmpDOB\":\"1998-03-16\",\"EmpPhoneNo\":84,\"EmpEmailID\":\"bhaves.gill@rediffmail.com\",\"EmpLaguagesKnown\":\"saw\",\"EmployeePersonalID\":80,\"PrevCompany\":\"confess\",\"JobTtile\":\"stop\",\"WorkLocation\":\"freeze\",\"FromDate\":\"2003-08-15\",\"ToDate\":\"1982-04-11\",\"EmpType\":\"kick\",\"RecentGrad\":\"inspire\",\"CertificationsVerified\":true,\"EmpBloodgroup\":\"imply\",\"EmpEmergencycontact\":66,\"Relation\":\"measure\",\"PocName\":\"Dr. Ahilya Bhat\",\"Id\":10}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of EmpFullName",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/EmpFullName/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(EmpFullName)",
+										"EmpFullName",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=EmpFullName eq 'Bhuvaneshwar Dubashi'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpFullName eq 'Bhuvaneshwar Dubashi'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpGender",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/EmpGender/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(EmpGender)",
+										"EmpGender",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=EmpGender eq 'remain'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpGender eq 'remain'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpDOB",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/EmpDOB/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(EmpDOB)",
+										"EmpDOB",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=EmpDOB eq 1998-03-16\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpDOB eq 1998-03-16\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpPhoneNo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/EmpPhoneNo/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(EmpPhoneNo)",
+										"EmpPhoneNo",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=EmpPhoneNo eq 84\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpPhoneNo eq 84\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpEmailID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/EmpEmailID/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(EmpEmailID)",
+										"EmpEmailID",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=EmpEmailID eq 'bhaves.gill@rediffmail.com'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpEmailID eq 'bhaves.gill@rediffmail.com'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpLaguagesKnown",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/EmpLaguagesKnown/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(EmpLaguagesKnown)",
+										"EmpLaguagesKnown",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=EmpLaguagesKnown eq 'saw'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpLaguagesKnown eq 'saw'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmployeePersonalID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/EmployeePersonalID/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(EmployeePersonalID)",
+										"EmployeePersonalID",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=EmployeePersonalID eq 80\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmployeePersonalID eq 80\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of PrevCompany",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/PrevCompany/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(PrevCompany)",
+										"PrevCompany",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=PrevCompany eq 'confess'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "PrevCompany eq 'confess'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of JobTtile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/JobTtile/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(JobTtile)",
+										"JobTtile",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=JobTtile eq 'stop'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "JobTtile eq 'stop'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of WorkLocation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/WorkLocation/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(WorkLocation)",
+										"WorkLocation",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=WorkLocation eq 'freeze'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "WorkLocation eq 'freeze'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of FromDate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/FromDate/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(FromDate)",
+										"FromDate",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=FromDate eq 2003-08-15\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "FromDate eq 2003-08-15\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of ToDate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/ToDate/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(ToDate)",
+										"ToDate",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=ToDate eq 1982-04-11\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "ToDate eq 1982-04-11\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpType",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/EmpType/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(EmpType)",
+										"EmpType",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=EmpType eq 'kick'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpType eq 'kick'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of RecentGrad",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/RecentGrad/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(RecentGrad)",
+										"RecentGrad",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=RecentGrad eq 'inspire'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "RecentGrad eq 'inspire'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of CertificationsVerified",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/CertificationsVerified/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(CertificationsVerified)",
+										"CertificationsVerified",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=CertificationsVerified eq true\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "CertificationsVerified eq true\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpBloodgroup",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/EmpBloodgroup/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(EmpBloodgroup)",
+										"EmpBloodgroup",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=EmpBloodgroup eq 'imply'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpBloodgroup eq 'imply'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpEmergencycontact",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/EmpEmergencycontact/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(EmpEmergencycontact)",
+										"EmpEmergencycontact",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=EmpEmergencycontact eq 66\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpEmergencycontact eq 66\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Relation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/Relation/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(Relation)",
+										"Relation",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=Relation eq 'measure'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Relation eq 'measure'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of PocName",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/PocName/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(PocName)",
+										"PocName",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=PocName eq 'Dr. Ahilya Bhat'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "PocName eq 'Dr. Ahilya Bhat'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes(<<replace_with_keyFieldValue>>)/Id/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes(Id)",
+										"Id",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$filter=Id eq 10\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Id eq 10\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmployeePersonalInfoes?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmployeePersonalInfoes"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ]},     	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "EmlpoyeeProfile",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmlpoyeeProfileByEmpID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"DomainVertical\":\"Delivery\",\"EmpType\":\"partners\",\"WorkLocation\":\"Germany\",\"EmpID\":58,\"EmpName\":\"Gemine Pothuvaal IV\",\"EmpEmailID\":\"bilwa.kaul@rediffmail.com\",\"EmpPhoto\":\"stem\",\"JobTitle\":\"soar\",\"ReportingManager\":\"envy\",\"PackageOffered\":44,\"EmpContactNum\":91,\"Level\":\"tee\",\"Domain\":\"teach\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a EmlpoyeeProfile",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"DomainVertical\":\"Delivery\",\"EmpType\":\"partners\",\"WorkLocation\":\"Germany\",\"EmpID\":58,\"EmpName\":\"Gemine Pothuvaal IV\",\"EmpEmailID\":\"bilwa.kaul@rediffmail.com\",\"EmpPhoto\":\"stem\",\"JobTitle\":\"soar\",\"ReportingManager\":\"envy\",\"PackageOffered\":44,\"EmpContactNum\":91,\"Level\":\"tee\",\"Domain\":\"teach\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of EmpID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/EmpID/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(EmpID)",
+										"EmpID",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=EmpID eq 58\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpID eq 58\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpName",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/EmpName/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(EmpName)",
+										"EmpName",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=EmpName eq 'Gemine Pothuvaal IV'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpName eq 'Gemine Pothuvaal IV'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpEmailID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/EmpEmailID/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(EmpEmailID)",
+										"EmpEmailID",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=EmpEmailID eq 'bilwa.kaul@rediffmail.com'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpEmailID eq 'bilwa.kaul@rediffmail.com'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpPhoto",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/EmpPhoto/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(EmpPhoto)",
+										"EmpPhoto",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=EmpPhoto eq 'stem'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpPhoto eq 'stem'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of JobTitle",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/JobTitle/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(JobTitle)",
+										"JobTitle",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=JobTitle eq 'soar'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "JobTitle eq 'soar'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of DomainVertical",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/DomainVertical/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(DomainVertical)",
+										"DomainVertical",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=DomainVertical eq Delivery\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "DomainVertical eq Delivery\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of ReportingManager",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/ReportingManager/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(ReportingManager)",
+										"ReportingManager",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=ReportingManager eq 'envy'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "ReportingManager eq 'envy'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpType",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/EmpType/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(EmpType)",
+										"EmpType",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=EmpType eq partners\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpType eq partners\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of WorkLocation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/WorkLocation/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(WorkLocation)",
+										"WorkLocation",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=WorkLocation eq Germany\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "WorkLocation eq Germany\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of PackageOffered",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/PackageOffered/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(PackageOffered)",
+										"PackageOffered",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=PackageOffered eq 44\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "PackageOffered eq 44\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of EmpContactNum",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/EmpContactNum/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(EmpContactNum)",
+										"EmpContactNum",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=EmpContactNum eq 91\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpContactNum eq 91\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Level",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/Level/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(Level)",
+										"Level",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=Level eq 'tee'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Level eq 'tee'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Domain",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/Domain/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(Domain)",
+										"Domain",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=Domain eq 'teach'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Domain eq 'teach'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+			{
+					"name": "System Query Options 3",
+					"item": [		        
+	
+	
+	{
+							"name": "Get $filter option on enum",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=DomainVertical eq <<Model.OrgDept'Delivery'>>",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "DomainVertical eq <<Model.OrgDept'Delivery'>>"
+										}
+									]
+								}
+							},
+							"response": []
+						} 
+, 	
+	
+	{
+							"name": "Get $filter option on enum",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=EmpType eq <<Model.EmploymentType'partners'>>",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "EmpType eq <<Model.EmploymentType'partners'>>"
+										}
+									]
+								}
+							},
+							"response": []
+						} 
+, 	
+	
+	{
+							"name": "Get $filter option on enum",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$filter=WorkLocation eq <<Model.OrgBranch'Germany'>>",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "WorkLocation eq <<Model.OrgBranch'Germany'>>"
+										}
+									]
+								}
+							},
+							"response": []
+						} 
+					    ]
+				        },
+	{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ,
+		{
+					"name": "Navigation  Request",
+					"item": [
+								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/EmpInfo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)",
+										"EmpInfo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on EmlpoyeeProfiles navigation property EmpInfo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)?$expand=EmpInfo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "EmpInfo"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+,  								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/Appraisal",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)",
+										"Appraisal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on EmlpoyeeProfiles navigation property Appraisal",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)?$expand=Appraisal",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "Appraisal"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+,  								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)/OrgProvidedTrainings",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)",
+										"OrgProvidedTrainings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on EmlpoyeeProfiles navigation property OrgProvidedTrainings",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)?$expand=OrgProvidedTrainings",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"EmlpoyeeProfiles(<<replace_with_keyFieldValue>>)"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "OrgProvidedTrainings"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+					    ]
+				        }
+  ,       		{
+					"name": "metadata request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{ServiceRoot}}/$metadata",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{ServiceRoot}}",
+								"$metadata"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]}
